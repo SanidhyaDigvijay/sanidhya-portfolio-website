@@ -83,7 +83,7 @@ const names = [
     "Sanidhya",
     "Санидхья",
     "Sanidhya",
-    "ساندھیہ"
+    "ஸாநித்யா"
 ];
 
 let nameIndex = 0;
@@ -100,7 +100,7 @@ function updateName() {
 
         changingName.style.opacity = 1;
 
-    }, 275);
+    }, 257);
 }
 
 if (changingName) {
@@ -108,4 +108,18 @@ if (changingName) {
     changingName.style.transition = "opacity 0.3s ease";
 
     setInterval(updateName, 4000);
+}
+
+const karateImages = document.querySelectorAll(".karate-img");
+
+let currentKarate = 0;
+
+if (karateImages.length > 1) {
+    setInterval(() => {
+        karateImages[currentKarate].classList.remove("active");
+
+        currentKarate = (currentKarate + 1) % karateImages.length;
+
+        karateImages[currentKarate].classList.add("active");
+    }, 3500);
 }
