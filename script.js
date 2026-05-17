@@ -100,7 +100,7 @@ function updateName() {
 
         changingName.style.opacity = 1;
 
-    }, 250);
+    }, 275);
 }
 
 if (changingName) {
