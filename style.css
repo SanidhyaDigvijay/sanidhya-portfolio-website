@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -95,6 +96,8 @@ body::before {
 /* Hero */
 
 .hero {
+
+    position: relative;
     min-height: 100vh;
 
     display: flex;
@@ -105,7 +108,7 @@ body::before {
 }
 
 .hero-text {
-    max-width: 680px;
+    width: 700px;
 }
 
 .intro {
@@ -148,11 +151,15 @@ body::before {
 }
 
 .buttons {
-    margin-top: 40px;
+    position: absolute;
+
+    left: 50%;
+    bottom: 65px;
+
+    transform: translateX(-50%);
 
     display: flex;
-    align-items: center;
-    gap: 18px;
+    gap: 22px;
 }
 
 .btn {
@@ -169,16 +176,19 @@ body::before {
 }
 
 .primary {
-    background: #f8fafc;
-    color: #050816;
+    color: #f8fafc;
+
+    border: 1px solid rgba(248, 250, 252, 0.18);
+
+    backdrop-filter: blur(10px);
 }
 
 .primary:hover {
-    background: #ffffff;
-
     transform: translateY(-5px);
+    color:#020617;
+    background-color: white;
 
-    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.08);
+    border-color: rgba(248, 250, 252, 0.35);
 }
 
 .secondary {
@@ -191,15 +201,42 @@ body::before {
 
 .secondary:hover {
     transform: translateY(-5px);
+    color:#020617;
+    background-color: white;
 
     border-color: rgba(248, 250, 252, 0.35);
+}
+
+.home-description {
+    margin-top: 34px;
+    padding-left: 18px;
+
+    border-left: 2px solid rgba(248, 245, 208, 0.45);
+
+    font-family: 'Space Grotesk', sans-serif;
+
+    color: rgba(203, 213, 225, 0.78);
+
+    font-size: 19px;
+    font-weight: 400;
+
+    line-height: 1.75;
+    letter-spacing: 0.25px;
+}
+
+.home-description p {
+    margin-bottom: 7px;
+}
+
+.gold-text {
+    color: #f4e66a;
 }
 
 /* Profile Image */
 
 .hero-image {
     position: relative;
-
+    transform: translateX(-40px);   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -410,29 +447,47 @@ body::before {
     margin-bottom: 18px;
 }
 
+@keyframes shineText {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.hero h2 {
+    margin-bottom: 28px;
+}
+
 #changing-role {
-    color: #cbd5e1;
+    display: inline-block;
 
     background: linear-gradient(
-        90deg,
-        #e2e8f0,
-        #94a3b8,
-        #f8fafc
+    90deg,
+    #fff6b7,
+    #f4e66a,
+    #d4c24d
     );
 
     background-size: 200% auto;
 
     background-clip: text;
     -webkit-background-clip: text;
-
     -webkit-text-fill-color: transparent;
 
-    font-family: Georgia, serif;
-    font-style: italic;
-    font-weight: 500;
-    letter-spacing: 1px;
+    font-size: 60px;
+    line-height: 1.2    ;
+    font-weight: 600;
+    letter-spacing: -2px;
 
-    animation: shineText 5s linear infinite;
+    font-family: 'Inter', Arial, sans-serif;
+    font-style: normal;
+
+    animation: none;
+
+    white-space: nowrap;
 }
 
 @keyframes shineText {
@@ -445,18 +500,25 @@ body::before {
     }
 }
 
-#changing-role {
-    font-size: 96px;
-    line-height: 0.95;
-
-    font-family: Georgia, serif;
-    font-style: italic;
-    font-weight: 500;
-    letter-spacing: -3px;
-
-    color: #cbd5e1;
+@media (max-width: 850px) {
+    #changing-role {
+        font-size: 42px;
+        letter-spacing: -1px;
+    }
 }
-#changing-role {
-    font-size: 54px;
-    letter-spacing: -2px;
+
+#changing-name {
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #dcecff,
+        #9fb3c8
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    line-height: 1.2;
+    padding-top: 10px;
 }

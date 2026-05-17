@@ -44,7 +44,7 @@ window.addEventListener("scroll", () => {
 const changingRole = document.getElementById("changing-role");
 
 const roles = [
-    "Web Developer",
+    "Full Stack Developer",
     "Competitive Programmer",
     "Open Source Enthusiast"
 ]
@@ -71,4 +71,41 @@ if (changingRole) {
     changingRole.style.transition = "opacity 0.2s ease";
 
     setInterval(updateRole, 2500);
+}
+
+const changingName = document.getElementById("changing-name");
+
+const names = [
+    "Sanidhya",
+    "सानिध्य",
+    "Sanidhya",
+    "サニディヤ",
+    "Sanidhya",
+    "Санидхья",
+    "Sanidhya",
+    "ساندھیہ"
+];
+
+let nameIndex = 0;
+
+function updateName() {
+
+    changingName.style.opacity = 0;
+
+    setTimeout(() => {
+
+        nameIndex = (nameIndex + 1) % names.length;
+
+        changingName.textContent = names[nameIndex];
+
+        changingName.style.opacity = 1;
+
+    }, 250);
+}
+
+if (changingName) {
+
+    changingName.style.transition = "opacity 0.3s ease";
+
+    setInterval(updateName, 4000);
 }
