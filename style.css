@@ -687,7 +687,7 @@ body::before {
 
 .lore-card-wide {
     grid-column: span 8;
-    transform: rotate(1deg);
+    transform: rotate(2deg);
 }
 
 .lore-card-history {
@@ -756,12 +756,12 @@ body::before {
 }
 
 .lore-card-karate .lore-image {
-    height: 330px;
+    height: 500px;
 }
 
 .karate-image-box {
     position: relative;
-    background:rgba(15, 23, 42, 0.58);
+    background:white;
 }
 
 .karate-img {
@@ -786,7 +786,7 @@ body::before {
 
     object-fit: contain !important;
 
-    background: #09112d;
+    background: white;
 
     padding: 10px;
 
@@ -794,7 +794,7 @@ body::before {
 
     transform: rotate(-12deg) scale(0.92);
 
-    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    box-shadow: white;
 
     transition: all 0.5s ease;
 
