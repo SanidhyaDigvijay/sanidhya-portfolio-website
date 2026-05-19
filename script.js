@@ -123,3 +123,17 @@ if (karateImages.length > 1) {
         karateImages[currentKarate].classList.add("active");
     }, 3500);
 }
+
+const historySlides = document.querySelectorAll(".history-slide");
+
+let historyIndex = 0;
+
+setInterval(() => {
+
+    historySlides[historyIndex].classList.remove("active");
+
+    historyIndex = (historyIndex + 1) % historySlides.length;
+
+    historySlides[historyIndex].classList.add("active");
+
+}, 400);
