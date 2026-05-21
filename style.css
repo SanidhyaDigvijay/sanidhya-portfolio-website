@@ -590,6 +590,10 @@ body::before {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 19px;
     line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.9;
 }
 
 .lore-layout {
@@ -969,6 +973,25 @@ body::before {
     margin-bottom: 70px;
 }
 
+.stack-subtext{
+    color: rgba(203, 213, 225, 0.72);
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: 17px;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+
+    font-weight: 400;
+
+    max-width: 850px;
+    margin: 1.5rem auto 4rem;
+    line-height: 1.9;
+}
+
+.stacks-wrapper{
+    max-width: 1300px;
+}
 /* CATEGORY */
 
 .stack-category {
@@ -986,7 +1009,7 @@ body::before {
     color: #f4e66a;
 
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.82rem;
+    font-size: 1.5rem;
     font-weight: 700;
 
     letter-spacing: 6px;
@@ -1048,11 +1071,11 @@ body::before {
 /* ICON */
 
 .stack-card i {
-    font-size: 46px;
+    font-size: 2.8rem;
 
     filter:
         saturate(0.75)
-        brightness(0.78);
+        brightness(1.5);
 
     opacity: 0.82;
 
@@ -1079,7 +1102,7 @@ body::before {
 /* HOVER */
 
 .stack-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-6px) scale(1.03);
 
     border-color: rgba(244,230,106,0.35);
 
