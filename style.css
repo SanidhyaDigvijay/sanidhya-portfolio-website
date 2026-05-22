@@ -1637,3 +1637,111 @@ body::before {
         transform: translateY(-4px);
     }
 }
+
+
+.code-tab {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.code-tab img {
+    width: 34px;
+    height: 34px;
+
+    object-fit: contain;
+
+    filter: brightness(1.1);
+    transition: 0.35s ease;
+}
+
+.code-tab:hover img {
+    transform: scale(1.12);
+    filter: brightness(1.4);
+}
+
+.code-tab span {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+
+
+/* CONTACT SECTION */
+
+.contact-section {
+    position: relative;
+}
+
+.contact-subtext {
+    max-width: 760px;
+    margin: -25px auto 60px;
+
+    text-align: center;
+    color: rgba(203, 213, 225, 0.72);
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.contact-card {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 46px;
+
+    border-radius: 34px;
+    border: 1px solid rgba(148, 163, 184, 0.14);
+
+    background:
+        radial-gradient(circle at top right, rgba(244,230,106,0.06), transparent 35%),
+        linear-gradient(
+            180deg,
+            rgba(15, 23, 42, 0.82),
+            rgba(2, 6, 23, 0.95)
+        );
+
+    box-shadow: 0 25px 70px rgba(0,0,0,0.3);
+}
+
+.contact-card h3 {
+    color: #f8fafc;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 34px;
+    margin-bottom: 18px;
+}
+
+.contact-card p {
+    color: rgba(203, 213, 225, 0.72);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 34px;
+}
+
+.contact-links a {
+    padding: 12px 24px;
+    border-radius: 999px;
+
+    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    color: #020617;
+    background: #f8fafc;
+
+    transition: 0.35s ease;
+}
+
+.contact-links a:hover {
+    transform: translateY(-3px);
+    background: #ffffff;
+}
