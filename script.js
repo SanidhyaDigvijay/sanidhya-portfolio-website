@@ -137,3 +137,65 @@ setInterval(() => {
     historySlides[historyIndex].classList.add("active");
 
 }, 400);
+
+
+
+
+const codeData = {
+    codeforces: {
+        label: "Competitive Programming",
+        title: "Codeforces",
+        description: "Contest-driven problem solving focused on logic, implementation, and algorithmic thinking.",
+        link: "https://codeforces.com/profile/Sanidhya_Digvijay"
+    },
+
+    codechef: {
+        label: "Competitive Practice",
+        title: "CodeChef",
+        description: "Regular contests and practice sessions that help me stay consistent with problem solving.",
+        link: "https://www.codechef.com/users/sanidhya_000"
+    },
+
+    leetcode: {
+        label: "DSA Practice",
+        title: "LeetCode",
+        description: "A space for strengthening data structures, algorithms, and interview-focused thinking.",
+        link: "https://leetcode.com/u/Sanidhya_Digvijay/"
+    },
+
+    github: {
+        label: "Development Work",
+        title: "GitHub",
+        description: "Projects, experiments, commits, and the place where my development work takes shape.",
+        link: "https://github.com/SanidhyaDigvijay"
+    }
+};
+
+const codeTabs = document.querySelectorAll(".code-tab");
+const codePanel = document.querySelector(".code-panel");
+
+const codeLabel = document.getElementById("code-label");
+const codeTitle = document.getElementById("code-title");
+const codeDescription = document.getElementById("code-description");
+const codeLink = document.getElementById("code-link");
+
+codeTabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+        const platform = tab.dataset.platform;
+        const data = codeData[platform];
+
+        codeTabs.forEach(item => item.classList.remove("active"));
+        tab.classList.add("active");
+
+        codePanel.classList.add("fade");
+
+        setTimeout(() => {
+            codeLabel.textContent = data.label;
+            codeTitle.textContent = data.title;
+            codeDescription.textContent = data.description;
+            codeLink.href = data.link;
+
+            codePanel.classList.remove("fade");
+        }, 220);
+    });
+});
