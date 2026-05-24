@@ -199,3 +199,10 @@ codeTabs.forEach(tab => {
         }, 220);
     });
 });
+
+const reachToggle = document.querySelector(".reach-toggle");
+const reachLinks = document.querySelector(".mini-reach-links");
+
+reachToggle.addEventListener("click", () => {
+    reachLinks.classList.toggle("active");
+});

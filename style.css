@@ -1674,88 +1674,199 @@ body::before {
 
 
 /* REACH SECTION */
+
 .contact-section{
-    min-height: 65vh;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* MAIN STRIP */
+
+.mini-reach{
+    height: 100px;
+    padding: 0 28px;
+
+    border-radius: 999px;
+
+    background: transparent;
+    border: 1px solid rgba(244, 230, 106, 0.28);
+
+    backdrop-filter: blur(14px);
+
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    overflow: visible;
+
+    box-shadow:
+        0 24px 70px rgba(0,0,0,0.22),
+        inset 0 1px 0 rgba(255,255,255,0.03);
+}
+
+/* TEXT */
+
+.mini-reach p{
+    color: rgba(248,250,252,0.92);
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+
+
+    white-space: nowrap;
+}
+
+
+
+
+/* BUTTON */
+
+.reach-toggle {
+    height: 64px;
+    padding: 0 34px;
+
+    border-radius: 999px;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.35s ease;
+
+    
+    background: transparent;
+
+    color: rgba(248,250,252,0.92);
+
+    border:1px solid rgba(244, 230, 106, 0.28);
+
+    backdrop-filter: blur(10px);
+}
+
+.reach-toggle:hover {
+    transform: translateY(-3px);
+    background: #f8fafc;
+    color: #020617;
+
+    border:white;
+
+}
+
+
+
+
+
+/* LINKS CONTAINER */
+
+.mini-reach-links{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    max-width: 0;
+
+    opacity: 0;
+    overflow: visible;
+
+    transform: translateX(-20px);
+
+    transition:
+        max-width 0.55s ease,
+        opacity 0.35s ease,
+        transform 0.45s ease;
+}
+
+.mini-reach-links.active{
+    max-width: 400px;
+
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ICON BUTTONS */
+
+.mini-reach-links a{
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    padding-top: 120px;
-    padding-bottom: 120px;
+    background: white;
+    border: 1px solid white;
+
+
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
-.mini-reach {
-    display: flex;
-    align-items: center;
-    gap: 24px;
+/* ICON IMAGE */
 
-    padding: 18px 24px;
+.mini-reach-links a img{
+    width: 24px;
+    height: 24px;
 
-    border-radius: 999px;
-    border: 1px solid rgba(148, 163, 184, 0.14);
-
-    background: rgba(15, 23, 42, 0.62);
-    backdrop-filter: blur(14px);
-
-    width: fit-content;
-    max-width: 850px;
+    object-fit: contain;
 }
 
-.mini-reach p {
-    color: #f8fafc;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 20px;
+/* HOVER */
+
+.mini-reach-links a:hover{
+    transform:
+        translateY(-4px)
+        scale(1.06);
+
+    background: white;
+    border: 1px solid white;
+
+    box-shadow:
+        0 10px 24px rgba(0,0,0,0.22);
 }
 
-.reach-toggle {
-    padding: 12px 22px;
-    border-radius: 999px;
-    border: none;
-
-    background: #f8fafc;
-    color: #020617;
-
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 600;
-
-    cursor: pointer;
-}
-
-.mini-reach-links {
-    display: flex;
-    gap: 12px;
-
+#contact .section-divider{
     opacity: 0;
-    pointer-events: none;
-    transform: translateX(-12px);
+}
+
+
+
+
+
+
+
+
+.copyright{
+    position: fixed;
+
+    right: 34px;
+    bottom: 22px;
+
+    color: rgba(203, 213, 225, 0.34);
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+
+    letter-spacing: 1.2px;
+
+    z-index: 999;
 
     transition: 0.35s ease;
 }
 
-.mini-reach-links.active {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateX(0);
-}
-
-.mini-reach-links a {
-    color: rgba(248, 250, 252, 0.88);
-    text-decoration: none;
-
-    padding: 10px 16px;
-    border-radius: 999px;
-
-    border: 1px solid rgba(255,255,255,0.1);
-    background: rgba(255,255,255,0.04);
-
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 14px;
-
-    transition: 0.3s ease;
-}
-
-.mini-reach-links a:hover {
-    color: #020617;
-    background: #f8fafc;
+.copyright:hover{
+    color: rgba(248,250,252,0.62);
 }
