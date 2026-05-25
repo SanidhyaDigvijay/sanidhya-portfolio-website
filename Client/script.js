@@ -143,31 +143,35 @@ setInterval(() => {
 
 const codeData = {
     codeforces: {
-        label: "Competitive Programming",
-        title: "Codeforces",
-        description: "Contest-driven problem solving focused on logic, implementation, and algorithmic thinking.",
-        link: "https://codeforces.com/profile/Sanidhya_Digvijay"
+    label: "Competitive Programming",
+    title: "Codeforces",
+    description: "Contest-driven problem solving focused on logic, implementation, and algorithmic thinking.",
+    link: "https://codeforces.com/profile/Sanidhya_Digvijay",
+    type: "codeforces"
     },
 
     codechef: {
-        label: "Competitive Practice",
-        title: "CodeChef",
-        description: "Regular contests and practice sessions that help me stay consistent with problem solving.",
-        link: "https://www.codechef.com/users/sanidhya_000"
+    label: "Competitive Practice",
+    title: "CodeChef",
+    description: "A practice space where I keep sharpening consistncy, contest mindset, and problem-solving speed.Competitive programming practice centered around consistency, implementation accuracy, and improving problem-solving instincts over time.",
+    link: "https://www.codechef.com/users/sanidhya_000",
+    type: "codechef"
     },
 
     leetcode: {
-        label: "DSA Practice",
-        title: "LeetCode",
-        description: "A space for strengthening data structures, algorithms, and interview-focused thinking.",
-        link: "https://leetcode.com/u/Sanidhya_Digvijay/"
+    label: "DSA Practice",
+    title: "LeetCode",
+    description: "A space where I refine structured thinking, deepen algorithmic understanding, and explore cleaner approaches to problem solving.Focused on sharpening analytical thinking through structured DSA practice, optimization patterns, and implementation depth.",
+    link: "https://leetcode.com/u/Sanidhya_Digvijay/",
+    type: "leetcode"
     },
 
     github: {
-        label: "Development Work",
-        title: "GitHub",
-        description: "Projects, experiments, commits, and the place where my development work takes shape.",
-        link: "https://github.com/SanidhyaDigvijay"
+    label: "Development Work",
+    title: "GitHub",
+    description: "Projects, commits, experiments, and the place where my development work takes shape.",
+    link: "https://github.com/SanidhyaDigvijay",
+    type: "github"
     }
 };
 
@@ -189,14 +193,43 @@ codeTabs.forEach(tab => {
 
         codePanel.classList.add("fade");
 
-        setTimeout(() => {
-            codeLabel.textContent = data.label;
-            codeTitle.textContent = data.title;
-            codeDescription.textContent = data.description;
-            codeLink.href = data.link;
+    setTimeout(() => {
+    codeLabel.textContent = data.label;
+    codeTitle.textContent = data.title;
+    if (data.type === "leetcode" || data.type === "codechef") {
+    codeDescription.textContent = "";
+} else {
+    codeDescription.textContent = data.description;
+}
+    codeLink.href = data.link;
 
-            codePanel.classList.remove("fade");
-        }, 220);
+    if (data.type === "codeforces") {
+        loadCodeforcesGraph();
+    }
+
+    else if (data.type === "github") {
+        loadGitHubStats();
+    }
+
+    else if (data.type === "leetcode" || data.type === "codechef") {
+
+    if (codeforcesChart) {
+        codeforcesChart.destroy();
+    }
+
+    const chartBox = document.querySelector(".code-chart");
+
+    chartBox.innerHTML = `
+        <div class="code-text-content">
+            <p>
+                ${data.description}
+            </p>
+        </div>
+    `;
+}
+
+    codePanel.classList.remove("fade");
+    }, 220);
     });
 });
 
@@ -206,3 +239,165 @@ const reachLinks = document.querySelector(".mini-reach-links");
 reachToggle.addEventListener("click", () => {
     reachLinks.classList.toggle("active");
 });
+
+async function testBackend() {
+
+    try {
+
+        const response = await fetch("http://localhost:5000/api/test");
+
+        const data = await response.json();
+
+        console.log(data.message);
+
+    }
+
+    catch(error) {
+
+        console.log("Backend connection failed");
+
+    }
+
+}
+
+testBackend();
+
+
+let codeforcesChart;
+
+async function loadCodeforcesGraph() {
+    try {
+        const chartBox = document.querySelector(".code-chart");
+        chartBox.innerHTML = `<canvas id="codeforcesChart"></canvas>`;
+
+        const response = await fetch("http://localhost:5000/api/codeforces/Sanidhya_Digvijay");
+        const data = await response.json();
+
+        const labels = data.graphData.map(item => item.date);
+        const ratings = data.graphData.map(item => item.rating);
+
+        const ctx = document.getElementById("codeforcesChart");
+
+        if (!ctx) return;
+
+        if (codeforcesChart) {
+            codeforcesChart.destroy();
+        }
+
+        codeforcesChart = new Chart(ctx, {
+            type: "line",
+            data: {
+                labels: labels,
+                datasets: [{
+                    data: ratings,
+                    borderColor: "#f4e66a",
+                    backgroundColor: "rgba(244,230,106,0.08)",
+                    borderWidth: 2,
+                    tension: 0.35,
+                    fill: true,
+                    pointRadius: 0,
+                    pointHoverRadius: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+
+                scales: {
+                    x: {
+                        display: false
+                    },
+                    y: {
+                        ticks: {
+                            color: "rgba(203,213,225,0.6)"
+                        },
+                        grid: {
+                            color: "rgba(255,255,255,0.05)"
+                        }
+                    }
+                }
+            }
+        });
+
+    } catch (error) {
+        console.log("Codeforces graph failed to load");
+    }
+}
+
+loadCodeforcesGraph();
+
+
+async function loadGitHubStats() {
+    const response = await fetch("http://localhost:5000/api/github/SanidhyaDigvijay");
+    const data = await response.json();
+
+    const chartBox = document.querySelector(".code-chart");
+
+    if (codeforcesChart) {
+        codeforcesChart.destroy();
+    }
+
+    chartBox.innerHTML = `
+        <div class="github-stats">
+            <div>
+                <strong>${data.publicRepos}</strong>
+                <span>Public Repos</span>
+            </div>
+
+            <div>
+                <strong>${data.followers}</strong>
+                <span>Followers</span>
+            </div>
+
+            <div>
+                <strong>Active</strong>
+                <span>Profile Status</span>
+            </div>
+        </div>
+    `;
+}
+
+
+function drawChart(labels, values, label) {
+    const ctx = document.getElementById("codeforcesChart");
+
+    if (codeforcesChart) {
+        codeforcesChart.destroy();
+    }
+
+    codeforcesChart = new Chart(ctx, {
+        type: "line",
+        data: {
+            labels,
+            datasets: [{
+                label,
+                data: values,
+                borderColor: "#f4e66a",
+                backgroundColor: "rgba(244,230,106,0.08)",
+                borderWidth: 2,
+                tension: 0.35,
+                fill: true,
+                pointRadius: 0,
+                pointHoverRadius: 5
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+                x: { display: false },
+                y: {
+                    ticks: { color: "rgba(203,213,225,0.6)" },
+                    grid: { color: "rgba(255,255,255,0.05)" }
+                }
+            }
+        }
+    });
+}
