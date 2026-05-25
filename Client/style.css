@@ -1933,53 +1933,62 @@ body::before {
 
 
 
+/*Mobile Fix*/
+
 @media (max-width: 768px) {
-    .main-content {
-        padding: 0 6%;
+
+    body {
+        overflow-x: hidden;
     }
 
     .section {
+        padding: 80px 7%;
         min-height: auto;
-        padding: 70px 0;
     }
 
-    .hero {
-        flex-direction: column-reverse;
+    .section-title {
+        font-size: 58px;
         text-align: center;
-        gap: 35px;
     }
 
-    .hero-text {
+    /* CODE SECTION */
+
+    .code-showcase {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .code-panel {
+        width: 100%;
+        padding: 34px 24px;
+    }
+
+    #code-title {
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    #code-description {
+        font-size: 1rem;
+        line-height: 1.8;
         width: 100%;
     }
 
-    .hero h1 {
-        font-size: 48px;
-        letter-spacing: -2px;
-    }
-
-    #changing-role {
-        font-size: 34px;
-        white-space: normal;
-    }
-
-    .buttons {
-        position: static;
-        transform: none;
-        justify-content: center;
-        margin-top: 35px;
-        flex-wrap: wrap;
-    }
-
-    .image-circle {
-        width: 220px;
+    .code-chart {
         height: 220px;
     }
 
-    .lore-layout,
-    .projects-grid,
-    .code-showcase {
-        grid-template-columns: 1fr;
+    .code-profile-btn {
+        margin-top: 20px;
+    }
+
+    /* LORE SECTION */
+
+    .lore-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
     }
 
     .lore-card,
@@ -1988,48 +1997,87 @@ body::before {
     .lore-card-wide,
     .lore-card-history,
     .history-image-card {
-        grid-column: span 1;
-        transform: none;
-        margin-top: 0;
+        width: 100%;
+        min-height: auto;
+        transform: none !important;
+        margin-top: 0 !important;
     }
 
-    .public-speaking-row {
-        grid-template-columns: 1fr;
-    }
-
-    .section-title {
-        font-size: 52px;
-        letter-spacing: -2px;
-    }
-
-    .stack-grid {
-        gap: 18px;
-    }
-
-    .stack-card {
-        width: 125px;
-        height: 125px;
-    }
-
-    .code-tab span {
-        font-size: 1.1rem;
-    }
-
-    .mini-reach {
-        flex-direction: column;
-        border-radius: 28px;
+    .lore-card img,
+    .lore-card-large img,
+    .lore-card-karate img,
+    .history-image-card img {
+        width: 100%;
         height: auto;
-        padding: 28px;
-        transform: none;
+        object-fit: cover;
     }
 
-    .mini-reach-links.active {
+    .lore-card h2,
+    .lore-card-large h2,
+    .lore-card-karate h2 {
+        font-size: 2.6rem;
+        line-height: 1.1;
+    }
+
+    .lore-card p,
+    .lore-card-large p,
+    .lore-card-karate p {
+        font-size: 1rem;
+        line-height: 1.9;
+    }
+
+    /* REMOVE SIDEWAYS SHIFTING */
+
+    * {
         max-width: 100%;
     }
 
-    .copyright {
-        position: static;
-        text-align: center;
-        margin-bottom: 20px;
+    .public-speaking-row {
+        display: flex;
+        flex-direction: column;
     }
+
+    /* CERTIFICATE */
+
+    .certificate-image {
+        transform: none !important;
+        width: 100%;
+        max-width: 260px;
+        margin: auto;
+    }
+
+    /* HERO */
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+        line-height: 1;
+    }
+
+    #changing-role {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        width: 100%;
+    }
+
+    .buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .hero-image img {
+        width: 240px;
+    }
+
 }
