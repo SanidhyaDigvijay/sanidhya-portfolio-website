@@ -34,7 +34,7 @@ The project reflects my journey through development, competitive programming, an
 - Responsive cinematic interface
 - Real-time Codeforces rating graph
 - Dynamic GitHub profile integration
-- Smooth transitions and animations
+- Smooth transitions and interactions
 - Interactive coding profile section
 - Structured and scalable architecture
 
@@ -90,6 +90,7 @@ Backend deployed on Render.
 
 https://sanidhya-portfolio-website.vercel.app
 
+---
 
 ## Author
 
