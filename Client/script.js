@@ -244,7 +244,7 @@ async function testBackend() {
 
     try {
 
-        const response = await fetch("http://localhost:5000/api/test");
+        const response = await fetch("https://sanidhya-portfolio-backend.onrender.com/api/test");
 
         const data = await response.json();
 
@@ -270,7 +270,7 @@ async function loadCodeforcesGraph() {
         const chartBox = document.querySelector(".code-chart");
         chartBox.innerHTML = `<canvas id="codeforcesChart"></canvas>`;
 
-        const response = await fetch("http://localhost:5000/api/codeforces/Sanidhya_Digvijay");
+        const response = await fetch("https://sanidhya-portfolio-backend.onrender.com/api/codeforces/Sanidhya_Digvijay");
         const data = await response.json();
 
         const labels = data.graphData.map(item => item.date);
@@ -334,7 +334,7 @@ loadCodeforcesGraph();
 
 
 async function loadGitHubStats() {
-    const response = await fetch("http://localhost:5000/api/github/SanidhyaDigvijay");
+    const response = await fetch("https://sanidhya-portfolio-backend.onrender.com/api/github/SanidhyaDigvijay");
     const data = await response.json();
 
     const chartBox = document.querySelector(".code-chart");
