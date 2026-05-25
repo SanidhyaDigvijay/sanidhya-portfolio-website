@@ -1,4 +1,4 @@
-# Sanidhya
+# Sanidhya-Portfolio
 
 Personal portfolio built with a focus on minimal aesthetics, thoughtful interactions, and modern web engineering.
 
