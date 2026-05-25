@@ -1,0 +1,102 @@
+# Sanidhya
+
+Personal portfolio built with a focus on clean aesthetics, thoughtful interactions, and modern web engineering.
+
+---
+
+## Overview
+
+A full-stack portfolio designed to combine minimal design with dynamic functionality.  
+The project reflects my journey through development, competitive programming, and systems thinking.
+
+---
+
+## Stack
+
+### Frontend
+- HTML
+- CSS
+- JavaScript
+
+### Backend
+- Node.js
+- Express.js
+
+### APIs & Integrations
+- Codeforces API
+- GitHub API
+- Chart.js
+
+---
+
+## Features
+
+- Responsive cinematic interface
+- Real-time Codeforces rating graph
+- Dynamic GitHub profile integration
+- Smooth transitions and animations
+- Interactive coding profile section
+- Structured and scalable architecture
+
+---
+
+## Structure
+
+```txt
+Portfolio-Website/
+
+├── Client/
+│   ├── assets/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+│
+├── Server/
+│   └── server.js
+│
+├── package-lock.json
+├── package.json
+└── README.md
+```
+
+---
+
+## Local Setup
+
+```bash
+git clone https://github.com/SanidhyaDigvijay/sanidhya-portfolio-website
+```
+
+```bash
+npm install
+```
+
+```bash
+node Server/server.js
+```
+
+Open `Client/index.html` using Live Server.
+
+---
+
+## Deployment
+
+Frontend deployed on Vercel.  
+Backend deployed on Render.
+
+---
+
+## Live
+
+https://sanidhya-portfolio-website.vercel.app
+
+
+## Author
+
+Sanidhya Digvijay
+
+GitHub  
+https://github.com/SanidhyaDigvijay
+
+LinkedIn  
+https://linkedin.com/in/sanidhya-digvijay
