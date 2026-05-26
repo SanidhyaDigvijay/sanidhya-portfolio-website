@@ -1933,82 +1933,401 @@ body::before {
 
 
 
+/* ===================== PHONE FIX ===================== */
+
 @media (max-width: 768px) {
 
-    html {
-        font-size: 55%;
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
     }
 
-    body {
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        width: 100%;
+        margin-left: 0;
         overflow-x: hidden;
     }
 
     .section {
-        padding: 6rem 4rem;
+        width: 100%;
         min-height: auto;
+        padding: 80px 22px;
+        overflow: hidden;
     }
 
-    .hero {
-        transform: scale(0.92);
-        transform-origin: top center;
-    }
-
-    .hero-content,
-    .hero-image {
-        zoom: 0.92;
+    .section-divider {
+        width: 82%;
+        margin: 40px auto;
     }
 
     .section-title {
-        font-size: 7rem;
+        font-size: 54px;
+        line-height: 1;
+        text-align: center;
     }
 
-    .code-showcase,
-    .lore-layout,
-    .projects-grid,
-    .public-speaking-row {
-        transform: scale(0.92);
-        transform-origin: top center;
+    /* HOME */
+
+    .hero {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 34px;
+        padding-top: 80px;
     }
 
-    .code-panel,
-    .lore-card,
-    .lore-card-large,
-    .lore-card-karate,
-    .lore-card-history,
-    .history-image-card,
-    .project-card {
+    .hero-text {
         width: 100%;
-        max-width: 100%;
+        align-items: center;
     }
 
-    .lore-card img,
-    .lore-card-large img,
-    .lore-card-karate img,
-    .history-image-card img {
+    .hero h1 {
+        font-size: 48px;
+        line-height: 1.05;
+    }
+
+    #changing-name {
+        font-size: 54px;
+    }
+
+    #changing-role {
+        display: block;
+        max-width: 100%;
+        font-size: 28px;
+        line-height: 1.2;
+        white-space: normal;
+        word-break: normal;
+    }
+
+    .home-description {
         width: 100%;
-        height: auto;
-        object-fit: cover;
+        max-width: 330px;
+        margin: 22px auto 0;
+        text-align: center;
     }
 
-    .certificate-image {
-        max-width: 100%;
-        transform: rotate(-8deg);
+    .home-description p {
+        font-size: 15px;
+        line-height: 1.7;
     }
 
     .buttons {
-        flex-wrap: wrap;
+        position: static;
+        transform: none;
+        margin-top: 28px;
+        display: flex;
         justify-content: center;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 13px 22px;
+        font-size: 15px;
+    }
+
+    .hero-image,
+    .image-circle {
+        width: 220px;
+        height: 220px;
+    }
+
+    .image-circle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* STACK */
+
+    .stack-subtext,
+    .projects-subtext,
+    .code-subtext {
+        max-width: 300px;
+        font-size: 17px;
+        line-height: 1.7;
+        margin: 18px auto 44px;
+        text-align: center;
+    }
+
+    .stack-category {
+        margin-bottom: 58px;
+    }
+
+    .stack-category h3 {
+        font-size: 13px;
+        letter-spacing: 4px;
+        text-align: center;
+    }
+
+    .stack-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 130px);
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .stack-card {
+        width: 130px;
+        height: 130px;
+        border-radius: 24px;
+    }
+
+    .stack-card i {
+        font-size: 38px;
+    }
+
+    .stack-card span {
+        font-size: 13px;
+    }
+
+    /* WORKS */
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .project-card {
+        width: 100%;
+        min-height: auto;
+        padding: 22px;
+    }
+
+    .project-preview {
+        height: 170px;
+    }
+
+    .project-card h3 {
+        font-size: 25px;
+    }
+
+    .project-card p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .project-tech-icons {
+        flex-wrap: wrap;
+    }
+
+    /* CODE */
+
+    .code-showcase {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 26px;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .code-tabs {
+        gap: 16px;
+    }
+
+    .code-tab {
+        width: 100%;
+        min-height: 92px;
+        padding: 22px;
+    }
+
+    .code-tab img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .code-tab span {
+        font-size: 20px;
+    }
+
+    .code-panel {
+        width: 100%;
+        padding: 28px 22px;
+        min-height: auto;
+    }
+
+    #code-label {
+        font-size: 12px;
+        letter-spacing: 4px;
+    }
+
+    #code-title {
+        font-size: 42px;
+        line-height: 1;
+    }
+
+    #code-description {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .code-chart {
+        height: auto;
+        min-height: 190px;
+        margin: 26px 0;
+    }
+
+    .code-text-content {
+        min-height: 190px;
+        padding: 0;
+    }
+
+    .code-text-content p {
+        font-size: 15px;
+        line-height: 1.8;
+        text-align: center;
+        max-width: 280px;
+    }
+
+    .github-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .code-profile-btn {
+        padding: 12px 22px;
+        font-size: 14px;
+    }
+
+    /* LORE */
+
+    .lore-hero-text {
+        max-width: 340px;
+        margin: 0 auto 40px;
+        text-align: center;
+    }
+
+    .lore-hero-text h3 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .lore-hero-text p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .lore-layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .lore-card,
+    .lore-card-large,
+    .lore-card-karate,
+    .lore-card-wide,
+    .lore-card-history,
+    .history-image-card,
+    .lore-quote,
+    .speaking-text-card {
+        width: 100%;
+        grid-column: auto !important;
+        grid-row: auto !important;
+        transform: none !important;
+        margin: 0 !important;
+        min-height: auto;
+        padding: 24px;
+    }
+
+    .lore-image,
+    .karate-image-box,
+    .history-image-card,
+    .speaking-photos {
+        width: 100%;
+        height: auto;
+        min-height: 220px;
+        overflow: hidden;
+        border-radius: 24px;
+    }
+
+    .lore-image img,
+    .karate-image-box img,
+    .history-image-card img,
+    .speaking-photo {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        transform: none !important;
+    }
+
+    .karate-certificate {
+        object-fit: contain !important;
+        background: transparent !important;
+    }
+
+    .public-speaking-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        width: 100%;
+    }
+
+    .speaking-photos {
+        display: block;
+        min-height: 260px;
+    }
+
+    .speaking-photo {
+        position: static !important;
+        margin-bottom: 14px;
+    }
+
+    .lore-card span {
+        font-size: 12px;
+        letter-spacing: 4px;
+    }
+
+    .lore-card h4 {
+        font-size: 28px;
+        line-height: 1.25;
+    }
+
+    .lore-card p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    /* CONTACT */
+
+    .contact-section {
+        min-height: 55vh;
     }
 
     .mini-reach {
-        transform: scale(0.94);
-        transform-origin: center;
+        width: 100%;
+        max-width: 350px;
+        flex-direction: column;
+        border-radius: 28px;
+        padding: 24px;
+        gap: 18px;
+    }
+
+    .mini-reach p {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .mini-reach-links.active {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     .copyright {
         position: static;
         text-align: center;
-        margin-top: 4rem;
+        margin: 30px auto;
+        font-size: 12px;
     }
-
 }
