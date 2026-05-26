@@ -2041,6 +2041,8 @@ body::before {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center top;
+        transform: translateX(8px);
     }
 
     /* COMMON SUBTEXT */
@@ -2055,7 +2057,7 @@ body::before {
         text-align: center;
     }
 
-    /* LORE - CLEAN ONE CARD AFTER ANOTHER */
+    /* LORE */
 
     .lore-hero-text {
         max-width: 340px;
@@ -2411,7 +2413,7 @@ body::before {
 
 
 
-    .copyright {
+.copyright {
         position: static;
         text-align: center;
         margin: 30px auto;
