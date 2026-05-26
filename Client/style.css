@@ -1932,9 +1932,6 @@ body::before {
 
 
 
-
-/* ================= CLEAN MOBILE LAYOUT ================= */
-
 @media (max-width: 768px) {
 
     html,
@@ -2375,4 +2372,49 @@ body::before {
         margin: 30px auto;
         font-size: 12px;
     }
+
+    /* HERO IMAGE PERFECT CENTER */
+
+.hero-image-container,
+.hero-image-wrapper,
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.image-circle {
+    margin: 0 auto;
+}
+
+/* CONTACT SECTION FIX */
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 24px;
+}
+
+.mini-reach {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mini-reach p {
+    width: 100%;
+    text-align: center;
+}
+
+.reach-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px auto 0;
+}
+
+.mini-reach-links {
+    justify-content: center;
+}
 }
