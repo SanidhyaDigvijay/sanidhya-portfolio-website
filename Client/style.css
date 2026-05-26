@@ -2330,4 +2330,92 @@ body::before {
         margin: 30px auto;
         font-size: 12px;
     }
+
+    /* CENTER HERO PHOTO */
+
+    .hero-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .image-circle {
+        margin: 0 auto;
+        transform: none !important;
+    }
+
+    /* FIX LORE CUTTING */
+
+    .lore-layout {
+        max-width: 360px;
+        overflow: visible;
+    }
+
+    .lore-card,
+    .lore-card-large,
+    .lore-card-karate,
+    .lore-card-wide,
+    .lore-card-history,
+    .history-image-card,
+    .speaking-text-card {
+        overflow: hidden;
+        max-width: 100%;
+    }
+
+    .lore-card h4,
+    .speaking-text-card h4 {
+        font-size: 26px;
+        line-height: 1.25;
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+
+    .lore-card p,
+    .speaking-text-card p {
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+
+    /* FIX PUBLIC SPEAKING PHOTOS */
+
+    .public-speaking-row {
+        overflow: visible;
+    }
+
+    .speaking-photos {
+        width: 100%;
+        height: auto;
+        min-height: unset;
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .speaking-photo {
+        position: static !important;
+        width: 100% !important;
+        height: 220px !important;
+        object-fit: cover;
+        transform: none !important;
+        border-radius: 24px;
+    }
+
+    /* FIX CONTACT BUTTON */
+
+    .mini-reach {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .reach-toggle {
+        position: static !important;
+        transform: none !important;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
