@@ -1934,102 +1934,81 @@ body::before {
 
 
 @media (max-width: 768px) {
-    .main-content {
-        padding: 0 6%;
+
+    html {
+        font-size: 55%;
+    }
+
+    body {
+        overflow-x: hidden;
     }
 
     .section {
+        padding: 6rem 4rem;
         min-height: auto;
-        padding: 70px 0;
     }
 
     .hero {
-        flex-direction: column-reverse;
-        text-align: center;
-        gap: 35px;
+        transform: scale(0.92);
+        transform-origin: top center;
     }
 
-    .hero-text {
-        width: 100%;
-    }
-
-    .hero h1 {
-        font-size: 48px;
-        letter-spacing: -2px;
-    }
-
-    #changing-role {
-        font-size: 34px;
-        white-space: normal;
-    }
-
-    .buttons {
-        position: static;
-        transform: none;
-        justify-content: center;
-        margin-top: 35px;
-        flex-wrap: wrap;
-    }
-
-    .image-circle {
-        width: 220px;
-        height: 220px;
-    }
-
-    .lore-layout,
-    .projects-grid,
-    .code-showcase {
-        grid-template-columns: 1fr;
-    }
-
-    .lore-card,
-    .lore-card-large,
-    .lore-card-karate,
-    .lore-card-wide,
-    .lore-card-history,
-    .history-image-card {
-        grid-column: span 1;
-        transform: none;
-        margin-top: 0;
-    }
-
-    .public-speaking-row {
-        grid-template-columns: 1fr;
+    .hero-content,
+    .hero-image {
+        zoom: 0.92;
     }
 
     .section-title {
-        font-size: 52px;
-        letter-spacing: -2px;
+        font-size: 7rem;
     }
 
-    .stack-grid {
-        gap: 18px;
+    .code-showcase,
+    .lore-layout,
+    .projects-grid,
+    .public-speaking-row {
+        transform: scale(0.92);
+        transform-origin: top center;
     }
 
-    .stack-card {
-        width: 125px;
-        height: 125px;
+    .code-panel,
+    .lore-card,
+    .lore-card-large,
+    .lore-card-karate,
+    .lore-card-history,
+    .history-image-card,
+    .project-card {
+        width: 100%;
+        max-width: 100%;
     }
 
-    .code-tab span {
-        font-size: 1.1rem;
+    .lore-card img,
+    .lore-card-large img,
+    .lore-card-karate img,
+    .history-image-card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .certificate-image {
+        max-width: 100%;
+        transform: rotate(-8deg);
+    }
+
+    .buttons {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .mini-reach {
-        flex-direction: column;
-        border-radius: 28px;
-        height: auto;
-        padding: 28px;
-        transform: none;
-    }
-
-    .mini-reach-links.active {
-        max-width: 100%;
+        transform: scale(0.94);
+        transform-origin: center;
     }
 
     .copyright {
         position: static;
         text-align: center;
-        margin-bottom: 20px;
+        margin-top: 4rem;
     }
+
 }
