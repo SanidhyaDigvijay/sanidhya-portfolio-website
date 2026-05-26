@@ -1933,7 +1933,7 @@ body::before {
 
 
 
-/* ===================== PHONE FIX ===================== */
+/* ================= CLEAN MOBILE LAYOUT ================= */
 
 @media (max-width: 768px) {
 
@@ -1948,21 +1948,21 @@ body::before {
     }
 
     .main-content {
-        width: 100%;
         margin-left: 0;
+        width: 100%;
         overflow-x: hidden;
     }
 
     .section {
         width: 100%;
         min-height: auto;
-        padding: 80px 22px;
+        padding: 80px 24px;
         overflow: hidden;
     }
 
     .section-divider {
-        width: 82%;
-        margin: 40px auto;
+        width: 80%;
+        margin: 45px auto;
     }
 
     .section-title {
@@ -1975,10 +1975,10 @@ body::before {
 
     .hero {
         flex-direction: column-reverse;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         text-align: center;
-        gap: 34px;
+        gap: 36px;
         padding-top: 80px;
     }
 
@@ -1988,25 +1988,21 @@ body::before {
     }
 
     .hero h1 {
-        font-size: 48px;
+        font-size: 50px;
         line-height: 1.05;
     }
 
     #changing-name {
-        font-size: 54px;
+        font-size: 56px;
     }
 
     #changing-role {
-        display: block;
-        max-width: 100%;
-        font-size: 28px;
+        font-size: 30px;
         line-height: 1.2;
         white-space: normal;
-        word-break: normal;
     }
 
     .home-description {
-        width: 100%;
         max-width: 330px;
         margin: 22px auto 0;
         text-align: center;
@@ -2021,10 +2017,9 @@ body::before {
         position: static;
         transform: none;
         margin-top: 28px;
-        display: flex;
         justify-content: center;
-        gap: 14px;
         flex-wrap: wrap;
+        gap: 14px;
     }
 
     .btn {
@@ -2034,8 +2029,9 @@ body::before {
 
     .hero-image,
     .image-circle {
-        width: 220px;
-        height: 220px;
+        width: 230px;
+        height: 230px;
+        margin: 0 auto;
     }
 
     .image-circle img {
@@ -2044,17 +2040,153 @@ body::before {
         object-fit: cover;
     }
 
-    /* STACK */
+    /* COMMON SUBTEXT */
 
     .stack-subtext,
     .projects-subtext,
     .code-subtext {
-        max-width: 300px;
+        max-width: 320px;
+        margin: 18px auto 44px;
         font-size: 17px;
         line-height: 1.7;
-        margin: 18px auto 44px;
         text-align: center;
     }
+
+    /* LORE - CLEAN ONE CARD AFTER ANOTHER */
+
+    .lore-hero-text {
+        max-width: 340px;
+        margin: 0 auto 42px;
+        text-align: center;
+    }
+
+    .lore-hero-text h3 {
+        font-size: 30px;
+        line-height: 1.2;
+    }
+
+    .lore-hero-text p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .lore-layout {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 26px !important;
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .lore-card,
+    .lore-card-large,
+    .lore-card-karate,
+    .lore-card-wide,
+    .lore-card-history,
+    .history-image-card,
+    .lore-quote,
+    .speaking-text-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: auto !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
+        transform: none !important;
+        margin: 0 !important;
+        padding: 24px !important;
+        overflow: hidden !important;
+    }
+
+    .lore-image,
+    .karate-image-box {
+        width: 100%;
+        height: 230px;
+        border-radius: 24px;
+        overflow: hidden;
+    }
+
+    .lore-image img,
+    .karate-image-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: none !important;
+    }
+
+    .karate-certificate {
+        object-fit: contain !important;
+        background: rgba(255,255,255,0.04);
+    }
+
+    .history-image-card {
+        height: 230px !important;
+        padding: 0 !important;
+    }
+
+    .history-image-card img,
+    .history-slide {
+        width: 100% !important;
+        height: 230px !important;
+        object-fit: cover !important;
+        border-radius: 24px;
+        transform: none !important;
+    }
+
+    .public-speaking-row {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 26px;
+        width: 100%;
+    }
+
+    .speaking-photos {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 18px;
+        width: 100%;
+        height: auto !important;
+        min-height: auto !important;
+        overflow: visible !important;
+    }
+
+    .speaking-photo {
+        position: static !important;
+        width: 100% !important;
+        height: 220px !important;
+        object-fit: cover !important;
+        transform: none !important;
+        border-radius: 24px;
+    }
+
+    .lore-card span,
+    .speaking-text-card span {
+        font-size: 12px;
+        letter-spacing: 4px;
+    }
+
+    .lore-card h4,
+    .speaking-text-card h4 {
+        font-size: 28px;
+        line-height: 1.25;
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+
+    .lore-card p,
+    .speaking-text-card p {
+        font-size: 15px;
+        line-height: 1.8;
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+
+    .lore-quote p {
+        font-size: 22px;
+        line-height: 1.4;
+    }
+
+    /* STACK */
 
     .stack-category {
         margin-bottom: 58px;
@@ -2090,9 +2222,9 @@ body::before {
     /* WORKS */
 
     .projects-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 24px;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 26px;
         max-width: 360px;
         margin: 0 auto;
     }
@@ -2123,14 +2255,16 @@ body::before {
     /* CODE */
 
     .code-showcase {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex !important;
+        flex-direction: column !important;
         gap: 26px;
         max-width: 360px;
         margin: 0 auto;
     }
 
     .code-tabs {
+        display: flex;
+        flex-direction: column;
         gap: 16px;
     }
 
@@ -2151,8 +2285,9 @@ body::before {
 
     .code-panel {
         width: 100%;
-        padding: 28px 22px;
         min-height: auto;
+        padding: 28px 22px;
+        overflow: hidden;
     }
 
     #code-label {
@@ -2178,14 +2313,17 @@ body::before {
 
     .code-text-content {
         min-height: 190px;
-        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .code-text-content p {
+        max-width: 280px;
         font-size: 15px;
         line-height: 1.8;
         text-align: center;
-        max-width: 280px;
+        overflow-wrap: break-word;
     }
 
     .github-stats {
@@ -2195,107 +2333,6 @@ body::before {
     .code-profile-btn {
         padding: 12px 22px;
         font-size: 14px;
-    }
-
-    /* LORE */
-
-    .lore-hero-text {
-        max-width: 340px;
-        margin: 0 auto 40px;
-        text-align: center;
-    }
-
-    .lore-hero-text h3 {
-        font-size: 30px;
-        line-height: 1.2;
-    }
-
-    .lore-hero-text p {
-        font-size: 16px;
-        line-height: 1.8;
-    }
-
-    .lore-layout {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 24px;
-        max-width: 360px;
-        margin: 0 auto;
-    }
-
-    .lore-card,
-    .lore-card-large,
-    .lore-card-karate,
-    .lore-card-wide,
-    .lore-card-history,
-    .history-image-card,
-    .lore-quote,
-    .speaking-text-card {
-        width: 100%;
-        grid-column: auto !important;
-        grid-row: auto !important;
-        transform: none !important;
-        margin: 0 !important;
-        min-height: auto;
-        padding: 24px;
-    }
-
-    .lore-image,
-    .karate-image-box,
-    .history-image-card,
-    .speaking-photos {
-        width: 100%;
-        height: auto;
-        min-height: 220px;
-        overflow: hidden;
-        border-radius: 24px;
-    }
-
-    .lore-image img,
-    .karate-image-box img,
-    .history-image-card img,
-    .speaking-photo {
-        width: 100%;
-        height: 220px;
-        object-fit: cover;
-        transform: none !important;
-    }
-
-    .karate-certificate {
-        object-fit: contain !important;
-        background: transparent !important;
-    }
-
-    .public-speaking-row {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 24px;
-        width: 100%;
-    }
-
-    .speaking-photos {
-        display: block;
-        min-height: 260px;
-    }
-
-    .speaking-photo {
-        position: static !important;
-        margin-bottom: 14px;
-    }
-
-    .lore-card span {
-        font-size: 12px;
-        letter-spacing: 4px;
-    }
-
-    .lore-card h4 {
-        font-size: 28px;
-        line-height: 1.25;
-    }
-
-    .lore-card p {
-        font-size: 15px;
-        line-height: 1.8;
     }
 
     /* CONTACT */
@@ -2308,6 +2345,8 @@ body::before {
         width: 100%;
         max-width: 350px;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         border-radius: 28px;
         padding: 24px;
         gap: 18px;
@@ -2316,6 +2355,12 @@ body::before {
     .mini-reach p {
         font-size: 20px;
         text-align: center;
+    }
+
+    .reach-toggle {
+        position: static !important;
+        transform: none !important;
+        margin: 0 auto;
     }
 
     .mini-reach-links.active {
@@ -2329,151 +2374,5 @@ body::before {
         text-align: center;
         margin: 30px auto;
         font-size: 12px;
-    }
-
-    /* CENTER HERO PHOTO */
-
-    .hero-image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .image-circle {
-        margin: 0 auto;
-        transform: none !important;
-    }
-
-    /* FIX LORE CUTTING */
-
-    .lore-layout {
-        max-width: 360px;
-        overflow: visible;
-    }
-
-    .lore-card,
-    .lore-card-large,
-    .lore-card-karate,
-    .lore-card-wide,
-    .lore-card-history,
-    .history-image-card,
-    .speaking-text-card {
-        overflow: hidden;
-        max-width: 100%;
-    }
-
-    .lore-card h4,
-    .speaking-text-card h4 {
-        font-size: 26px;
-        line-height: 1.25;
-        white-space: normal;
-        overflow-wrap: break-word;
-    }
-
-    .lore-card p,
-    .speaking-text-card p {
-        white-space: normal;
-        overflow-wrap: break-word;
-    }
-
-    /* FIX PUBLIC SPEAKING PHOTOS */
-
-    .public-speaking-row {
-        overflow: visible;
-    }
-
-    .speaking-photos {
-        width: 100%;
-        height: auto;
-        min-height: unset;
-        overflow: visible;
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-    }
-
-    .speaking-photo {
-        position: static !important;
-        width: 100% !important;
-        height: 220px !important;
-        object-fit: cover;
-        transform: none !important;
-        border-radius: 24px;
-    }
-
-    /* FIX CONTACT BUTTON */
-
-    .mini-reach {
-        align-items: center;
-        justify-content: center;
-    }
-
-    .reach-toggle {
-        position: static !important;
-        transform: none !important;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 768px) {
-
-    /* LORE: keep desktop composition, just shrink it */
-    .lore-section {
-        overflow: hidden;
-        padding: 70px 0;
-    }
-
-    .lore-section .section-title,
-    .lore-hero-text {
-        width: 360px;
-        max-width: 360px;
-        margin-left: auto;
-        margin-right: auto;
-        transform: none !important;
-    }
-
-    .lore-layout {
-        width: 1100px !important;
-        max-width: none !important;
-
-        transform: scale(0.32) !important;
-        transform-origin: top left !important;
-
-        margin-left: calc((100vw - 352px) / 2) !important;
-        display: grid !important;
-        grid-template-columns: repeat(12, 1fr) !important;
-        gap: 24px !important;
-
-        overflow: visible !important;
-    }
-
-    .lore-card,
-    .lore-card-large,
-    .lore-card-karate,
-    .lore-card-wide,
-    .lore-card-history,
-    .history-image-card,
-    .lore-quote,
-    .public-speaking-row,
-    .speaking-text-card {
-        transform: none !important;
-        margin: 0 !important;
-        width: auto !important;
-        max-width: none !important;
-        overflow: hidden !important;
-    }
-
-    .public-speaking-row {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
-    }
-
-    .lore-section {
-        min-height: 1900px;
     }
 }
