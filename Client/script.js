@@ -161,7 +161,7 @@ const codeData = {
     leetcode: {
     label: "DSA Practice",
     title: "LeetCode",
-    description: "A space where I refine structured thinking, deepen algorithmic understanding, and explore cleaner approaches to problem solving.Focused on sharpening analytical thinking through structured DSA practice, optimization patterns, and implementation.",
+    description: "A space where I refine structured thinking, deepen algorithmic understanding, and explore cleaner approaches to problem solving.Focused on sharpening analytical thinking through structured DSA practice and optimization patterns.",
     link: "https://leetcode.com/u/Sanidhya_Digvijay/",
     type: "leetcode"
     },
