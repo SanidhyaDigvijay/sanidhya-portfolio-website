@@ -153,7 +153,7 @@ const codeData = {
     codechef: {
     label: "Competitive Practice",
     title: "CodeChef",
-    description: "A practice space where I keep sharpening consistncy, contest mindset, and problem-solving speed.Competitive programming practice centered around consistency, implementation accuracy, and improving problem-solving instincts over time.",
+    description: "A practice space where I keep sharpening consistncy, contest mindset, and problem-solving speed.Competitive programming practice centered around consistency, implementation accuracy, and improving problem-solving instincts.",
     link: "https://www.codechef.com/users/sanidhya_000",
     type: "codechef"
     },
@@ -161,7 +161,7 @@ const codeData = {
     leetcode: {
     label: "DSA Practice",
     title: "LeetCode",
-    description: "A space where I refine structured thinking, deepen algorithmic understanding, and explore cleaner approaches to problem solving.Focused on sharpening analytical thinking through structured DSA practice, optimization patterns, and implementation depth.",
+    description: "A space where I refine structured thinking, deepen algorithmic understanding, and explore cleaner approaches to problem solving.Focused on sharpening analytical thinking through structured DSA practice, optimization patterns, and implementation.",
     link: "https://leetcode.com/u/Sanidhya_Digvijay/",
     type: "leetcode"
     },
