@@ -2266,86 +2266,111 @@ body::before {
 
     /* CODE */
 
-    .code-showcase {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 26px;
-        max-width: 360px;
-        margin: 0 auto;
-    }
+.code-showcase {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 26px;
+    max-width: 360px;
+    margin: 0 auto;
+}
 
-    .code-tabs {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
+.code-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 
-    .code-tab {
-        width: 100%;
-        min-height: 92px;
-        padding: 22px;
-    }
+.code-tab {
+    width: 100%;
+    min-height: 92px;
+    padding: 22px;
+}
 
-    .code-tab img {
-        width: 32px;
-        height: 32px;
-    }
+.code-tab img {
+    width: 32px;
+    height: 32px;
+}
 
-    .code-tab span {
-        font-size: 20px;
-    }
+.code-tab span {
+    font-size: 20px;
+}
 
-    .code-panel {
-        width: 100%;
-        min-height: auto;
-        padding: 28px 22px;
-        overflow: hidden;
-    }
+.code-panel {
+    width: 100%;
+    min-height: auto;
+    height: auto;
 
-    #code-label {
-        font-size: 12px;
-        letter-spacing: 4px;
-    }
+    padding: 28px 22px 32px;
+    overflow: visible;
 
-    #code-title {
-        font-size: 42px;
-        line-height: 1;
-    }
+    display: flex;
+    flex-direction: column;
+}
 
-    #code-description {
-        font-size: 15px;
-        line-height: 1.7;
-    }
+#code-label {
+    font-size: 12px;
+    letter-spacing: 4px;
+}
 
-    .code-chart {
-        height: auto;
-        min-height: 190px;
-        margin: 26px 0;
-    }
+#code-title {
+    font-size: 42px;
+    line-height: 1;
+}
 
-    .code-text-content {
-        min-height: 190px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+#code-description {
+    font-size: 15px;
+    line-height: 1.7;
+}
 
-    .code-text-content p {
-        max-width: 280px;
-        font-size: 15px;
-        line-height: 1.8;
-        text-align: center;
-        overflow-wrap: break-word;
-    }
+.code-chart {
+    height: auto;
+    min-height: 190px;
+    margin: 26px 0;
+}
 
-    .github-stats {
-        grid-template-columns: 1fr;
-    }
+.code-text-content {
+    min-height: 190px;
 
-    .code-profile-btn {
-        padding: 12px 22px;
-        font-size: 14px;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.code-text-content p {
+    max-width: 280px;
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+.github-stats {
+    height: auto;
+    min-height: auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+
+    margin: 28px 0;
+}
+
+.github-stats div {
+    width: 100%;
+    padding: 22px 18px;
+}
+
+.code-profile-btn {
+    margin-top: 10px;
+
+    width: fit-content;
+
+    padding: 12px 22px;
+    font-size: 14px;
+
+    position: relative;
+    z-index: 3;
+}
 
 /* CONTACT */
 
