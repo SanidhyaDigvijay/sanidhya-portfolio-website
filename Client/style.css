@@ -1521,7 +1521,7 @@ body::before {
 }
 
 .code-panel {
-    min-height: 420px;
+    height: 550px;
     padding: 36px;
 
     border-radius: 32px;
@@ -1537,7 +1537,6 @@ body::before {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
 
     transition: 0.35s ease;
 }
@@ -1581,9 +1580,8 @@ body::before {
 /* GRAPH */
 
 .code-chart {
-    height: 170px;
+    height: 210px;
     width: 100%;
-
     margin: 28px 0;
 
     position: relative;
@@ -1600,7 +1598,7 @@ body::before {
 
 
 .github-stats {
-    height: 100%;
+    height: 170px;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1640,7 +1638,7 @@ body::before {
 
 
 .code-text-content{
-    height: 100%;
+    height: 170px;
 
     display: flex;
     align-items: center;
@@ -1723,6 +1721,16 @@ body::before {
 .code-tab span {
     font-size: 1.5rem;
     font-weight: 600;
+}
+
+
+.code-text-content,
+.github-stats {
+    height: 210px;
+}
+
+.code-profile-btn {
+    margin-top: auto;
 }
 
 
